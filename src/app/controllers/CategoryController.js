@@ -10,7 +10,7 @@ class CategoryController {
     const { name } = request.body;
 
     if (!name) {
-      return response.status(400).json({ erro: 'Name is required' });
+      return response.status(400).json({ error: 'Name is required' });
     }
     const category = await CategoryRepository.create({ name });
 
